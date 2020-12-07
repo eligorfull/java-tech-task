@@ -34,3 +34,19 @@ The service provides an endpoint that will determine, from a set of recipes, wha
     ```
     
 3. Run Springboot LunchApplication
+
+4. The lunch endpoint has been update it to use GET instead of POST e.g. http://localhost:8080/lunch?date=2020-06-06
+
+This will return all the valid recipes that do not have expired ingredients with the addition of
+displaying the bestBefore date ingredients at the bottom  
+
+5. A new endpoint has been added to get a recipe by title e.g. localhots:8080/recipe?title=Salad
+
+6. A new API endpoint was included to exclude recipes that include ingredients that I want to avoid e.g. http://localhost:8080/exclude?date=2020-06-06&exclude=Ham
+The exclude parameter is a comma separated string that can include one or many ingredients to be excluded
+
+7. Tests
+Test cases were included to validate the functionality at each layer of the application including
+repository
+service
+controller

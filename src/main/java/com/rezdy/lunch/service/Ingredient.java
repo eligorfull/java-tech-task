@@ -2,7 +2,9 @@ package com.rezdy.lunch.service;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 public class Ingredient {
@@ -18,9 +20,8 @@ public class Ingredient {
         return title;
     }
 
-    public Ingredient setTitle(String title) {
+    public void setTitle(String title) {
         this.title = title;
-        return this;
     }
 
     public LocalDate getBestBefore() {
@@ -40,4 +41,5 @@ public class Ingredient {
         this.useBy = useBy;
         return this;
     }
+
 }
